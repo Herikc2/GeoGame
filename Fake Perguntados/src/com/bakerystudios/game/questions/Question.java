@@ -12,8 +12,8 @@ public class Question {
 		this.answers = answers;
 	}
 
-	public String getName() {return text;}
-	public void setName(String text) {this.text = text;}
+	public String getText() {return text;}
+	public void setText(String text) {this.text = text;}
 	public List<Answer> getAnswers() {return answers;}
 	public void setAnswers(List<Answer> answers) {this.answers = answers;}
 	
