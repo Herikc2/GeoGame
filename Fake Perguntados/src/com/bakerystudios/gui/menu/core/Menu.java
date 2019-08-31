@@ -133,36 +133,6 @@ public abstract class Menu extends InputListener implements Renderable, Updatebl
 		}
 	}
 
-	@Override
-	public void keyTyped(KeyEvent e) {
-
-	}
-
-	@Override
-	public void mouseClicked(MouseEvent e) {
-
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent e) {
-
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
-
-	}
-
-	@Override
-	public void mousePressed(MouseEvent e) {
-
-	}
-
-	@Override
-	public void mouseReleased(MouseEvent e) {
-
-	}
-
 	public static boolean isUp() {
 		return up;
 	}
