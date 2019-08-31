@@ -21,19 +21,19 @@ public class QuestionManager {
 		answers.add(new Answer("2. " + "resposta errada"));
 		answers.add(new Answer("3. " + "resposta certa"));
 		answers.add(new Answer("4. " + "resposta errada"));
-		questions.add(new Question("pergunta pergunta pergunta pergunta?", answers, 2));
+		questions.add(new Question("pergunta 1?", answers, 2));
 		
 		answers.add(new Answer("1. " + "resposta errada"));
 		answers.add(new Answer("2. " + "resposta errada"));
 		answers.add(new Answer("3. " + "resposta errada"));
 		answers.add(new Answer("4. " + "resposta certa"));
-		questions.add(new Question("pergunta pergunta pergunta pergunta?", answers, 3));
+		questions.add(new Question("pergunta 2?", answers, 3));
 		
 		answers.add(new Answer("1. " + "resposta certa"));
 		answers.add(new Answer("2. " + "resposta errada"));
 		answers.add(new Answer("3. " + "resposta errada"));
 		answers.add(new Answer("4. " + "resposta errada"));
-		questions.add(new Question("pergunta pergunta pergunta pergunta?", answers, 0));
+		questions.add(new Question("pergunta 3?", answers, 0));
 		
 		return questions;
 	}

@@ -191,6 +191,7 @@ public class OptionMenu extends Menu {
 
 	@Override
 	public void mouseMoved(MouseEvent e) {
+		clicked = false;
 		mx = e.getX();
 		my = e.getY();
 	}

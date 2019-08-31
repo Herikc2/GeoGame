@@ -17,7 +17,7 @@ public class MainMenu extends Menu {
 
 	private int mx = 0, my = 0;
 	private boolean clicked = false;
-	
+
 	int currentFrame = 0, maxFrame = 30;
 
 	public MainMenu() {
@@ -32,19 +32,19 @@ public class MainMenu extends Menu {
 		coordenadasX.add(533);
 		coordenadasY.add(219);
 		coordenadasY.add(268);
-		
+
 		// Scores Coordenadas
 		coordenadasX.add(306);
 		coordenadasX.add(494);
 		coordenadasY.add(288);
 		coordenadasY.add(337);
-		
+
 		// OPÇÕES Coordenadas
 		coordenadasX.add(306);
 		coordenadasX.add(494);
 		coordenadasY.add(359);
 		coordenadasY.add(408);
-		
+
 		// SAIR Coordenadas
 		coordenadasX.add(358);
 		coordenadasX.add(451);
@@ -69,20 +69,20 @@ public class MainMenu extends Menu {
 			executeOption();
 			option.firstOption();
 		}
-		
+
 		currentFrame++;
 		int j = 0;
-		for (int i = 0; i < coordenadasX.size(); i += 2, j++) 
-			if ((mx > coordenadasX.get(i) && mx < coordenadasX.get(i + 1)) 
+		for (int i = 0; i < coordenadasX.size(); i += 2, j++)
+			if ((mx > coordenadasX.get(i) && mx < coordenadasX.get(i + 1))
 					&& (my > coordenadasY.get(i) && my < coordenadasY.get(i + 1))) {
 				option.setCurOption(option.getOption(j));
-				if(clicked) {
+				if (clicked) {
 					clicked = false;
-					if(currentFrame > maxFrame) {
+					if (currentFrame > maxFrame) {
 						enter = true;
 						currentFrame = 0;
-					}	
-				}
+					}
+				}				
 			}
 	}
 
@@ -106,18 +106,19 @@ public class MainMenu extends Menu {
 	public void mouseClicked(MouseEvent e) {
 		clicked = true;
 	}
-	
+
 	@Override
-	public void mouseReleased(MouseEvent e) {
+	public void mouseReleased(MouseEvent e) {		
 		clicked = false;
 	}
-	
+
 	@Override
 	public void mouseDragged(MouseEvent e) {
 	}
 
 	@Override
 	public void mouseMoved(MouseEvent e) {
+		clicked = false;
 		mx = e.getX();
 		my = e.getY();
 	}

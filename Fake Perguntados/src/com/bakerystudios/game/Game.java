@@ -17,7 +17,7 @@ import com.bakerystudios.tools.Updateble;
 public class Game implements Runnable, Renderable, Updateble {
 
 	private boolean isRunning;
-	
+
 	private Thread thread;
 	private Screen screen;
 	private List<InputListener> inputs = new ArrayList<>();
@@ -27,29 +27,30 @@ public class Game implements Runnable, Renderable, Updateble {
 	private BufferedImage frame;
 	private GraphicUserInterface gui;
 	public static AudioManager audio;
-	
+
 	private FakeAsked fa;
-	
-	public Game(){
+
+	public Game() {
 		// Object instantiation
 		gui = new GraphicUserInterface();
+		fa = new FakeAsked();
 		inputs = new ArrayList<>();
 		inputs.add(gui.getUi().getMainMenu());
 		inputs.add(gui.getUi().getOptionMenu());
+		inputs.add(fa);
 		screen = new Screen(inputs);
 		rand = new Random();
 		frame = new BufferedImage(Screen.WIDTH, Screen.HEIGHT, BufferedImage.TYPE_INT_RGB);
 		audio = new AudioManager();
-		fa = new FakeAsked();
 	}
-	
-	public synchronized void start(){
+
+	public synchronized void start() {
 		thread = new Thread(this);
 		isRunning = true;
 		thread.start();
 	}
-	
-	public synchronized void stop(){
+
+	public synchronized void stop() {
 		try {
 			thread.join();
 		} catch (InterruptedException e) {
@@ -58,37 +59,37 @@ public class Game implements Runnable, Renderable, Updateble {
 	}
 
 	@Override
-	public void update(){
+	public void update() {
 		gui.update();
 		audio.update();
-		
-		if(GameState.state == GameState.PLAYING) {
+
+		if (GameState.state == GameState.PLAYING) {
 			fa.update();
-		} else if(GameState.state == GameState.OVER) {
-			
+		} else if (GameState.state == GameState.OVER) {
+
 		}
 	}
-	
+
 	private void renderRoutines(Graphics g) {
 		gui.render(g);
 		fa.render(g);
 	}
 
 	@Override
-	public void render(Graphics g){
+	public void render(Graphics g) {
 		BufferStrategy bs = screen.getBufferStrategy();
-		if(bs == null) {
+		if (bs == null) {
 			screen.createBufferStrategy(3);
 			return;
 		}
-		
+
 		g = frame.getGraphics();
-		
+
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, Screen.WIDTH, Screen.HEIGHT);
-		
+
 		renderRoutines(g);
-		
+
 		g.dispose();
 		g = bs.getDrawGraphics();
 		g.drawImage(frame, 0, 0, Screen.WIDTH, Screen.HEIGHT, null);
@@ -104,18 +105,18 @@ public class Game implements Runnable, Renderable, Updateble {
 		long lastTime = System.nanoTime();
 
 		screen.requestFocus();
-		while(isRunning){
+		while (isRunning) {
 			long now = System.nanoTime();
 			delta += (now - lastTime) / ns;
 			lastTime = now;
-			
-			if(delta >= 1) {
+
+			if (delta >= 1) {
 				update();
 				render(null);
 				delta--;
 			}
 		}
-		
+
 		stop();
 	}
 }
