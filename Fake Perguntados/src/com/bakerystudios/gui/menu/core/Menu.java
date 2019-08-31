@@ -52,20 +52,20 @@ public abstract class Menu extends InputListener implements Renderable, Updatebl
 	}
 	
 	protected void drawCentralizedString(Graphics g, String str, int y) {
-		g.drawString(str, Screen.SCALE_WIDTH / 2 - g.getFontMetrics().stringWidth(str) / 2, y);
+		g.drawString(str, Screen.WIDTH / 2 - g.getFontMetrics().stringWidth(str) / 2, y);
 	}
 	
 	protected void fillCentralizedRect(Graphics g, int y, int width, int height) {
-		g.fillRect(Screen.SCALE_WIDTH / 2 - width / 2, y, width, height);
+		g.fillRect(Screen.WIDTH / 2 - width / 2, y, width, height);
 	}
 
 	@Override
 	public void render(Graphics g) {
-		int y = (int) (Screen.SCALE_WIDTH * 0.16);
+		int y = (int) (Screen.WIDTH * 0.16);
 		g.drawImage(background.getSprite(), 0, 0, null);
 		
 		g.setColor(Color.WHITE);
-		g.setFont(new Font("arial", Font.BOLD, (int) (Screen.SCALE_WIDTH * 0.07)));
+		g.setFont(new Font("arial", Font.BOLD, (int) (Screen.WIDTH * 0.07)));
 		
 
 		// GAME TITLE ----------------------------------------------------------
@@ -74,7 +74,7 @@ public abstract class Menu extends InputListener implements Renderable, Updatebl
 		
 		// MENU OPTIONS ----------------------------------------------------------
 		g.setColor(Color.WHITE);
-		g.setFont(new Font("arial", Font.BOLD, (int) (Screen.SCALE_WIDTH * 0.05)));
+		g.setFont(new Font("arial", Font.BOLD, (int) (Screen.WIDTH * 0.05)));
 		
 		for(int i = 0; i < option.optionAmount(); i++) {
 			String name = option.getOption(i).getName();

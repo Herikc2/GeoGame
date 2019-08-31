@@ -40,6 +40,7 @@ public class Game implements Runnable, Renderable, Updateble {
 		rand = new Random();
 		frame = new BufferedImage(Screen.WIDTH, Screen.HEIGHT, BufferedImage.TYPE_INT_RGB);
 		audio = new AudioManager();
+		fa = new FakeAsked();
 	}
 	
 	public synchronized void start(){
@@ -62,33 +63,15 @@ public class Game implements Runnable, Renderable, Updateble {
 		audio.update();
 		
 		if(GameState.state == GameState.PLAYING) {
-			
+			fa.update();
 		} else if(GameState.state == GameState.OVER) {
 			
 		}
 	}
 	
-	private void nonPixelatedRender(Graphics g) {
+	private void renderRoutines(Graphics g) {
 		gui.render(g);
-		
-		if(GameState.state == GameState.PLAYING) {
-			g.setColor(Color.GREEN);
-			g.fillOval(60, 60, 50, 50);
-			
-		} else if(GameState.state == GameState.OVER) {
-			
-		}
-	}
-	
-	private void pixelatedRender(Graphics g) {
-		
-		if(GameState.state == GameState.PLAYING) {
-			g.setColor(Color.BLUE);
-			g.fillOval(0, 0, 50, 50);
-			
-		} else if(GameState.state == GameState.OVER) {
-			
-		}
+		fa.render(g);
 	}
 
 	@Override
@@ -103,15 +86,13 @@ public class Game implements Runnable, Renderable, Updateble {
 		
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, Screen.WIDTH, Screen.HEIGHT);
-
-		pixelatedRender(g);
+		
+		renderRoutines(g);
 		
 		g.dispose();
 		g = bs.getDrawGraphics();
-		g.drawImage(frame, 0, 0, Screen.SCALE_WIDTH, Screen.SCALE_HEIGHT, null);
+		g.drawImage(frame, 0, 0, Screen.WIDTH, Screen.HEIGHT, null);
 
-		nonPixelatedRender(g);
-		
 		bs.show();
 	}
 

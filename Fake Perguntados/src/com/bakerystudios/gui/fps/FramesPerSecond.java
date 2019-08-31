@@ -31,8 +31,8 @@ public class FramesPerSecond implements Renderable, Updateble {
 	@Override
 	public void render(Graphics g){
 		g.setColor(Color.YELLOW);
-		g.setFont(new Font("Arial", Font.PLAIN, (int) (Screen.SCALE_WIDTH * 0.019)));
-		g.drawString(FPS, Screen.SCALE_WIDTH - (int) (Screen.SCALE_WIDTH * 0.025), (int) (Screen.SCALE_WIDTH * 0.019));
+		g.setFont(new Font("Arial", Font.PLAIN, (int) (Screen.WIDTH * 0.019)));
+		g.drawString(FPS, Screen.WIDTH - (int) (Screen.WIDTH * 0.025), (int) (Screen.WIDTH * 0.019));
 	}
 	
 }
