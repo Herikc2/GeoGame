@@ -42,19 +42,10 @@ public class FakeAsked extends InputListener implements Updateble, Renderable {
 		backgrounds = new ArrayList<>();
 		backgrounds.add(new Sprite("/sprites/background01.jpg"));
 		curBackground = backgrounds.get(0);
-		
-		List<State> states = new ArrayList<>();
-		List<Question> questions = new ArrayList<>();
-		List<Answer> answers = new ArrayList<>();
-		answers.add(new Answer("Joinville"));
-		answers.add(new Answer("Florianópolis"));
-		answers.add(new Answer("Blumenau"));
-		answers.add(new Answer("Balneário Camboriú"));
-		questions.add(new Question("Qual é a capital de Santa Catarina?", answers, 1));
-		states.add(new State("Santa Catarina", questions));
-		curRegion = new Region("Sul", states);
+
+		curRegion = qm.getRegions().get(0);
 		curState = curRegion.getStates().get(0);
-		curQuestion = curState.getQuestions().get(0);
+		curQuestion = curState.getQuestions().get(1);
 	}
 	
 	private boolean correct() {
