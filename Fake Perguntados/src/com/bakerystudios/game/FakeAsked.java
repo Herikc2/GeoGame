@@ -134,7 +134,7 @@ public class FakeAsked extends InputListener implements Updateble, Renderable {
 			s = (float) (s + ts2 * c1 * 0.8);
 			Text.drawCentralizedText(g, curQuestion.getText(), (int) s);
 
-			
+			//aiusdfhguiaysgfosadeuilhfliuasd
 
 			s = (float) (s + ts2 * c1 * 1.3);
 			g.setFont(f2);
