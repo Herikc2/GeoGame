@@ -23,6 +23,7 @@ public class Screen extends Canvas {
 		for(InputListener input : inputs) {
 			addKeyListener(input);
 			addMouseListener(input);
+			addMouseMotionListener(input);
 		}
 		setPreferredSize(new Dimension(WIDTH, HEIGHT));
 		frame = new JFrame("Fake Perguntados");
