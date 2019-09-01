@@ -4,9 +4,6 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
-import java.awt.event.MouseEvent;
-
-import javax.swing.JLabel;
 
 import com.bakerystudios.game.Game;
 import com.bakerystudios.game.GameState;
@@ -90,6 +87,8 @@ public abstract class Menu extends InputListener implements Renderable, Updatebl
 			drawCentralizedString(g, name, y);
 			y += fontHeight * 1.5;
 		}
+		g.setFont(new Font("Arial", Font.PLAIN, 25));
+		drawCentralizedString(g, "Equipe: Carlos, Herikc, Caio, Cristiano, Alexandro e Eduardo", 550);
 	}
 
 	@Override

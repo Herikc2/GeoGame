@@ -74,7 +74,9 @@ public class MainMenu extends Menu {
 		for (int i = 0; i < coordenadasX.size(); i += 2, j++)
 			if ((mx > coordenadasX.get(i) && mx < coordenadasX.get(i + 1))
 					&& (my > coordenadasY.get(i) && my < coordenadasY.get(i + 1))) {
-				option.setCurOption(option.getOption(j));
+				if(j < option.optionAmount()) {
+					option.setCurOption(option.getOption(j));
+				}
 				if (clicked) {
 					clicked = false;
 					if (currentFrame > maxFrame) {

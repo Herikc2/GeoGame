@@ -6,7 +6,6 @@ import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import com.bakerystudios.gui.GraphicUserInterface;
 import com.bakerystudios.sound.AudioManager;
