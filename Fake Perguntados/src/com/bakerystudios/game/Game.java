@@ -22,7 +22,7 @@ public class Game implements Runnable, Renderable, Updateble {
 	private Screen screen;
 	private List<InputListener> inputs = new ArrayList<>();
 
-	public static Random rand;
+	public static boolean newGame = false;
 
 	private BufferedImage frame;
 	private GraphicUserInterface gui;
@@ -39,7 +39,6 @@ public class Game implements Runnable, Renderable, Updateble {
 		inputs.add(gui.getUi().getOptionMenu());
 		inputs.add(fa);
 		screen = new Screen(inputs);
-		rand = new Random();
 		frame = new BufferedImage(Screen.WIDTH, Screen.HEIGHT, BufferedImage.TYPE_INT_RGB);
 		audio = new AudioManager();
 	}
@@ -62,11 +61,14 @@ public class Game implements Runnable, Renderable, Updateble {
 	public void update() {
 		gui.update();
 		audio.update();
+		
+		if(newGame) {
+			fa = new FakeAsked();
+			newGame = false;
+		}
 
 		if (GameState.state == GameState.PLAYING) {
 			fa.update();
-		} else if (GameState.state == GameState.OVER) {
-
 		}
 	}
 

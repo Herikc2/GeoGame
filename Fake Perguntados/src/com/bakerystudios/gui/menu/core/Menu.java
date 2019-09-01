@@ -82,7 +82,7 @@ public abstract class Menu extends InputListener implements Renderable, Updatebl
 			int fontHeight = g.getFontMetrics().getHeight();
 			if (option.getCurOption() == option.getOption(i)) {
 				int fontWidth = g.getFontMetrics().stringWidth(name);
-				g.setColor(Color.GRAY);
+				g.setColor(new Color(0, 0, 0, 80));
 				fillCentralizedRect(g, y - (int) (fontHeight * 0.85), (int) (fontWidth * 1.1),
 						(int) (fontHeight * 1.1));
 			}

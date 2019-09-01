@@ -15,73 +15,79 @@ public class QuestionManager {
 	//SUL
 	private List<Question> rs() {
 		List<Question> questions = new ArrayList<>();
+
 		List<Answer> answers = new ArrayList<>();
-		
 		answers.add(new Answer("1. " + "resposta errada"));
 		answers.add(new Answer("2. " + "resposta errada"));
 		answers.add(new Answer("3. " + "resposta certa"));
 		answers.add(new Answer("4. " + "resposta errada"));
-		questions.add(new Question("pergunta 1?", answers, 2));
-		
-		answers.add(new Answer("1. " + "resposta errada"));
-		answers.add(new Answer("2. " + "resposta errada"));
-		answers.add(new Answer("3. " + "resposta errada"));
-		answers.add(new Answer("4. " + "resposta certa"));
-		questions.add(new Question("pergunta 2?", answers, 3));
-		
-		answers.add(new Answer("1. " + "resposta certa"));
-		answers.add(new Answer("2. " + "resposta errada"));
-		answers.add(new Answer("3. " + "resposta errada"));
-		answers.add(new Answer("4. " + "resposta errada"));
-		questions.add(new Question("pergunta 3?", answers, 0));
+		questions.add(new Question("pergunta pergunta pergunta 1?", answers, 2));
+
+		List<Answer> answers1 = new ArrayList<>();
+		answers1.add(new Answer("1. " + "resposta errada"));
+		answers1.add(new Answer("2. " + "resposta errada"));
+		answers1.add(new Answer("3. " + "resposta errada"));
+		answers1.add(new Answer("4. " + "resposta certa"));
+		questions.add(new Question("pergunta pergunta pergunta 2?", answers1, 3));
+
+		List<Answer> answers2 = new ArrayList<>();
+		answers2.add(new Answer("1. " + "resposta certa"));
+		answers2.add(new Answer("2. " + "resposta errada"));
+		answers2.add(new Answer("3. " + "resposta errada"));
+		answers2.add(new Answer("4. " + "resposta errada"));
+		questions.add(new Question("pergunta pergunta pergunta 3?", answers2, 0));
 		
 		return questions;
 	}
 	private List<Question> sc() {
 		List<Question> questions = new ArrayList<>();
-		List<Answer> answers = new ArrayList<>();
 
+		List<Answer> answers = new ArrayList<>();
 		answers.add(new Answer("1. " + "resposta errada"));
 		answers.add(new Answer("2. " + "resposta errada"));
 		answers.add(new Answer("3. " + "resposta certa"));
 		answers.add(new Answer("4. " + "resposta errada"));
-		questions.add(new Question("pergunta pergunta pergunta pergunta?", answers, 2));
-		
-		answers.add(new Answer("1. " + "resposta errada"));
-		answers.add(new Answer("2. " + "resposta errada"));
-		answers.add(new Answer("3. " + "resposta errada"));
-		answers.add(new Answer("4. " + "resposta certa"));
-		questions.add(new Question("pergunta pergunta pergunta pergunta?", answers, 3));
-		
-		answers.add(new Answer("1. " + "resposta certa"));
-		answers.add(new Answer("2. " + "resposta errada"));
-		answers.add(new Answer("3. " + "resposta errada"));
-		answers.add(new Answer("4. " + "resposta errada"));
-		questions.add(new Question("pergunta pergunta pergunta pergunta?", answers, 0));
+		questions.add(new Question("pergunta pergunta pergunta 4?", answers, 2));
+
+		List<Answer> answers1 = new ArrayList<>();
+		answers1.add(new Answer("1. " + "resposta errada"));
+		answers1.add(new Answer("2. " + "resposta errada"));
+		answers1.add(new Answer("3. " + "resposta errada"));
+		answers1.add(new Answer("4. " + "resposta certa"));
+		questions.add(new Question("pergunta pergunta pergunta 5?", answers1, 3));
+
+		List<Answer> answers2 = new ArrayList<>();
+		answers2.add(new Answer("1. " + "resposta certa"));
+		answers2.add(new Answer("2. " + "resposta errada"));
+		answers2.add(new Answer("3. " + "resposta errada"));
+		answers2.add(new Answer("4. " + "resposta errada"));
+		questions.add(new Question("pergunta pergunta pergunta 6?", answers2, 0));
 		
 		return questions;
 	}
 	private List<Question> pr() {
 		List<Question> questions = new ArrayList<>();
-		List<Answer> answers = new ArrayList<>();
 
+		List<Answer> answers = new ArrayList<>();
 		answers.add(new Answer("1. " + "resposta errada"));
 		answers.add(new Answer("2. " + "resposta errada"));
 		answers.add(new Answer("3. " + "resposta certa"));
 		answers.add(new Answer("4. " + "resposta errada"));
-		questions.add(new Question("pergunta pergunta pergunta pergunta?", answers, 2));
-		
-		answers.add(new Answer("1. " + "resposta errada"));
-		answers.add(new Answer("2. " + "resposta errada"));
-		answers.add(new Answer("3. " + "resposta errada"));
-		answers.add(new Answer("4. " + "resposta certa"));
-		questions.add(new Question("pergunta pergunta pergunta pergunta?", answers, 3));
-		
-		answers.add(new Answer("1. " + "resposta certa"));
-		answers.add(new Answer("2. " + "resposta errada"));
-		answers.add(new Answer("3. " + "resposta errada"));
-		answers.add(new Answer("4. " + "resposta errada"));
-		questions.add(new Question("pergunta pergunta pergunta pergunta?", answers, 0));
+		questions.add(new Question("pergunta pergunta pergunta 7?", answers, 2));
+
+		List<Answer> answers1 = new ArrayList<>();
+		answers1.add(new Answer("1. " + "resposta errada"));
+		answers1.add(new Answer("2. " + "resposta errada"));
+		answers1.add(new Answer("3. " + "resposta errada"));
+		answers1.add(new Answer("4. " + "resposta certa"));
+		questions.add(new Question("pergunta pergunta pergunta 8?", answers1, 3));
+
+		List<Answer> answers2 = new ArrayList<>();
+		answers2.add(new Answer("1. " + "resposta certa"));
+		answers2.add(new Answer("2. " + "resposta errada"));
+		answers2.add(new Answer("3. " + "resposta errada"));
+		answers2.add(new Answer("4. " + "resposta errada"));
+		questions.add(new Question("pergunta pergunta pergunta 9?", answers2, 0));
 		
 		return questions;
 	}

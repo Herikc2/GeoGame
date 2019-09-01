@@ -21,8 +21,7 @@ public class MainMenu extends Menu {
 	int currentFrame = 0, maxFrame = 30;
 
 	public MainMenu() {
-		option.addOption(new MenuOption("NOVO JOGO"));
-		option.addOption(new MenuOption("SCORES"));
+		option.addOption(new MenuOption("JOGAR"));
 		option.addOption(new MenuOption("OPÇÕES"));
 		option.addOption(new MenuOption("SAIR"));
 		option.firstOption();
@@ -91,12 +90,10 @@ public class MainMenu extends Menu {
 		if (option.getCurOption() == option.getOption(0)) {
 			// NEW GAME
 			GameState.state = GameState.PLAYING;
-		} else if (option.getCurOption() == option.getOption(1)) {
-			// LOAD
-		} else if (option.getCurOption() == option.getOption(2)) {
+		}else if (option.getCurOption() == option.getOption(1)) {
 			// OPTIONS
 			MenuState.state = MenuState.OPTION;
-		} else if (option.getCurOption() == option.getOption(3)) {
+		} else if (option.getCurOption() == option.getOption(2)) {
 			// EXIT
 			System.exit(0);
 		}
