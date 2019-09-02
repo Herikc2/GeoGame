@@ -46,9 +46,9 @@ public class FakeAsked extends InputListener implements Updateble, Renderable {
 	
 	int currentFrame2 = 0, maxFrame2 = 120;
 
-	private boolean end;
+	private boolean end = false;
 
-	private int currentFrame3;
+	private int currentFrame3 = 0;
 	private int maxFrame3 = 600;
 
 	public FakeAsked() {
