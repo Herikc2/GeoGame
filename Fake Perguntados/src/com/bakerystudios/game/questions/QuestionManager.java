@@ -15,73 +15,79 @@ public class QuestionManager {
 	//SUL
 	private List<Question> rs() {
 		List<Question> questions = new ArrayList<>();
+
 		List<Answer> answers = new ArrayList<>();
-		
-		answers.add(new Answer("1. " + "resposta errada"));
-		answers.add(new Answer("2. " + "resposta errada"));
-		answers.add(new Answer("3. " + "resposta certa"));
-		answers.add(new Answer("4. " + "resposta errada"));
-		questions.add(new Question("pergunta 1?", answers, 2));
-		
-		answers.add(new Answer("1. " + "resposta errada"));
-		answers.add(new Answer("2. " + "resposta errada"));
-		answers.add(new Answer("3. " + "resposta errada"));
-		answers.add(new Answer("4. " + "resposta certa"));
-		questions.add(new Question("pergunta 2?", answers, 3));
-		
-		answers.add(new Answer("1. " + "resposta certa"));
-		answers.add(new Answer("2. " + "resposta errada"));
-		answers.add(new Answer("3. " + "resposta errada"));
-		answers.add(new Answer("4. " + "resposta errada"));
-		questions.add(new Question("pergunta 3?", answers, 0));
+		answers.add(new Answer("1. " + "Curitiba"));
+		answers.add(new Answer("2. " + "Florianópolis"));
+		answers.add(new Answer("3. " + "Porto Alegre"));
+		answers.add(new Answer("4. " + "São Paulo"));
+		questions.add(new Question("Qual é a capital do Rio Grande do Sul?", answers, 2));
+
+		List<Answer> answers1 = new ArrayList<>();
+		answers1.add(new Answer("1. " + "Tropical"));
+		answers1.add(new Answer("2. " + "Amazônia"));
+		answers1.add(new Answer("3. " + "Cerrado"));
+		answers1.add(new Answer("4. " + "Pampa"));
+		questions.add(new Question("Qual é o bioma do Rio Grande do Sul?", answers1, 3));
+
+		List<Answer> answers2 = new ArrayList<>();
+		answers2.add(new Answer("1. " + "Matambre Recheado"));
+		answers2.add(new Answer("2. " + "Bolo de Rolo"));
+		answers2.add(new Answer("3. " + "Arroz Boliviano"));
+		answers2.add(new Answer("4. " + "Muma de Siri"));
+		questions.add(new Question("Qual é a comida típica do Rio Grande do Sul?", answers2, 0));
 		
 		return questions;
 	}
 	private List<Question> sc() {
 		List<Question> questions = new ArrayList<>();
-		List<Answer> answers = new ArrayList<>();
 
-		answers.add(new Answer("1. " + "resposta errada"));
-		answers.add(new Answer("2. " + "resposta errada"));
-		answers.add(new Answer("3. " + "resposta certa"));
-		answers.add(new Answer("4. " + "resposta errada"));
-		questions.add(new Question("pergunta pergunta pergunta pergunta?", answers, 2));
-		
-		answers.add(new Answer("1. " + "resposta errada"));
-		answers.add(new Answer("2. " + "resposta errada"));
-		answers.add(new Answer("3. " + "resposta errada"));
-		answers.add(new Answer("4. " + "resposta certa"));
-		questions.add(new Question("pergunta pergunta pergunta pergunta?", answers, 3));
-		
-		answers.add(new Answer("1. " + "resposta certa"));
-		answers.add(new Answer("2. " + "resposta errada"));
-		answers.add(new Answer("3. " + "resposta errada"));
-		answers.add(new Answer("4. " + "resposta errada"));
-		questions.add(new Question("pergunta pergunta pergunta pergunta?", answers, 0));
+		List<Answer> answers = new ArrayList<>();
+		answers.add(new Answer("1. " + "Rio Branco"));
+		answers.add(new Answer("2. " + "Maceió"));
+		answers.add(new Answer("3. " + "Florianópolis"));
+		answers.add(new Answer("4. " + "Fortaleza"));
+		questions.add(new Question("Qual é a capital de Santa Catarina?", answers, 2));
+
+		List<Answer> answers1 = new ArrayList<>();
+		answers1.add(new Answer("1. " + "Cerrado"));
+		answers1.add(new Answer("2. " + "Semi-árido"));
+		answers1.add(new Answer("3. " + "Caatinga"));
+		answers1.add(new Answer("4. " + "Mata Atlântica"));
+		questions.add(new Question("Qual é o bioma de Santa Catarina?", answers1, 3));
+
+		List<Answer> answers2 = new ArrayList<>();
+		answers2.add(new Answer("1. " + "Pastel de Berbigão"));
+		answers2.add(new Answer("2. " + "Acarajé"));
+		answers2.add(new Answer("3. " + "Feijão tropeiro"));
+		answers2.add(new Answer("4. " + "Virado Paulista"));
+		questions.add(new Question("Qual é a comida típica de Santa Catarina?", answers2, 0));
 		
 		return questions;
 	}
 	private List<Question> pr() {
 		List<Question> questions = new ArrayList<>();
-		List<Answer> answers = new ArrayList<>();
 
-		answers.add(new Answer("1. " + "resposta errada"));
-		answers.add(new Answer("2. " + "resposta errada"));
-		answers.add(new Answer("3. " + "resposta certa"));
-		answers.add(new Answer("4. " + "resposta errada"));
-		questions.add(new Question("pergunta pergunta pergunta pergunta?", answers, 2));
-		
-		answers.add(new Answer("1. " + "resposta errada"));
-		answers.add(new Answer("2. " + "resposta errada"));
-		answers.add(new Answer("3. " + "resposta errada"));
-		answers.add(new Answer("4. " + "resposta certa"));
-		questions.add(new Question("pergunta pergunta pergunta pergunta?", answers, 3));
-		
-		answers.add(new Answer("1. " + "resposta certa"));
-		answers.add(new Answer("2. " + "resposta errada"));
-		answers.add(new Answer("3. " + "resposta errada"));
-		answers.add(new Answer("4. " + "resposta errada"));
-		questions.add(new Question("pergunta pergunta pergunta pergunta?", answers, 0));
+		List<Answer> answers = new ArrayList<>();
+		answers.add(new Answer("1. " + "Porto Velho"));
+		answers.add(new Answer("2. " + "Manaus"));
+		answers.add(new Answer("3. " + "Curitiba"));
+		answers.add(new Answer("4. " + "Macapá"));
+		questions.add(new Question("Qual é a capital do Paraná?", answers, 2));
+
+		List<Answer> answers1 = new ArrayList<>();
+		answers1.add(new Answer("1. " + "Pampa"));
+		answers1.add(new Answer("2. " + "Amazônia"));
+		answers1.add(new Answer("3. " + "Tropical"));
+		answers1.add(new Answer("4. " + "Mata Atlântica"));
+		questions.add(new Question("Qual é o bioma do Paraná?", answers1, 3));
+
+		List<Answer> answers2 = new ArrayList<>();
+		answers2.add(new Answer("1. " + "Barreado"));
+		answers2.add(new Answer("2. " + "Vatapá"));
+		answers2.add(new Answer("3. " + "Chambari"));
+		answers2.add(new Answer("4. " + "Furrundu"));
+		questions.add(new Question("Qual é a comida típica do Paraná?", answers2, 0));
 		
 		return questions;
 	}
