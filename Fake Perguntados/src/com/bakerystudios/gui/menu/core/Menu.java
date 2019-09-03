@@ -25,7 +25,7 @@ public abstract class Menu extends InputListener implements Renderable, Updatebl
 	private Sprite background;
 
 	public Menu() {
-		background = new Sprite("/sprites/background01.jpg");
+		background = new Sprite("/sprites/menu.png");
 	}
 
 	public abstract void executeOption();
@@ -67,7 +67,7 @@ public abstract class Menu extends InputListener implements Renderable, Updatebl
 		g.setFont(new Font("arial", Font.BOLD, (int) (Screen.WIDTH * 0.07)));
 
 		// GAME TITLE ----------------------------------------------------------
-		drawCentralizedString(g, "FAKE PERGUNTADOS", y);
+		//drawCentralizedString(g, "FAKE PERGUNTADOS", y);
 		y += g.getFontMetrics().getHeight() * 2.0;
 
 		// MENU OPTIONS ----------------------------------------------------------
@@ -79,7 +79,7 @@ public abstract class Menu extends InputListener implements Renderable, Updatebl
 			int fontHeight = g.getFontMetrics().getHeight();
 			if (option.getCurOption() == option.getOption(i)) {
 				int fontWidth = g.getFontMetrics().stringWidth(name);
-				g.setColor(new Color(0, 0, 0, 80));
+				g.setColor(new Color(0, 0, 0, 150));
 				fillCentralizedRect(g, y - (int) (fontHeight * 0.85), (int) (fontWidth * 1.1),
 						(int) (fontHeight * 1.1));
 			}

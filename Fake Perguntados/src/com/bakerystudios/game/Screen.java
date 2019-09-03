@@ -26,7 +26,7 @@ public class Screen extends Canvas {
 			addMouseMotionListener(input);
 		}
 		setPreferredSize(new Dimension(WIDTH, HEIGHT));
-		frame = new JFrame("Fake Perguntados");
+		frame = new JFrame("geogame");
 		frame.add(this);
 		frame.setResizable(false);
 		frame.pack();

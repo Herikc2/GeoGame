@@ -53,7 +53,9 @@ public class FakeAsked extends InputListener implements Updateble, Renderable {
 
 	public FakeAsked() {
 		backgrounds = new ArrayList<>();
-		backgrounds.add(new Sprite("/sprites/background01.jpg"));
+		backgrounds.add(new Sprite("/sprites/santacatarina.png"));
+		backgrounds.add(new Sprite("/sprites/parana.png"));
+		backgrounds.add(new Sprite("/sprites/riosul.png"));
 		curBackground = backgrounds.get(0);
 
 		curRegion = qm.getRegions().get(0);
@@ -115,40 +117,34 @@ public class FakeAsked extends InputListener implements Updateble, Renderable {
 			curRegion = qm.getRegions().get(0);
 			curState = curRegion.getStates().get(0);
 			curQuestion = curState.getQuestions().get(0);
-			// curBackground = ;
+			curBackground = backgrounds.get(2);
 		} else if (state == 1) {
 			curState = curRegion.getStates().get(0);
 			curQuestion = curState.getQuestions().get(1);
-			// curBackground = ;
 		} else if (state == 2) {
 			curState = curRegion.getStates().get(0);
 			curQuestion = curState.getQuestions().get(2);
-			// curBackground = ;
 		} else if (state == 3) {
 			curState = curRegion.getStates().get(1);
 			curQuestion = curState.getQuestions().get(0);
-			// curBackground = ;
+			curBackground = backgrounds.get(0);
 		} else if (state == 4) {
 			curState = curRegion.getStates().get(1);
 			curQuestion = curState.getQuestions().get(1);
-			// curBackground = ;
 		} else if (state == 5) {
 			curState = curRegion.getStates().get(1);
 			curQuestion = curState.getQuestions().get(2);
-			// curBackground = ;
 		} else if (state == 6) {
 			curState = curRegion.getStates().get(2);
 			curQuestion = curState.getQuestions().get(0);
-			// curBackground = ;
+			curBackground = backgrounds.get(1);
 		} else if (state == 7) {
 			curRegion = qm.getRegions().get(0);
 			curState = curRegion.getStates().get(2);
 			curQuestion = curState.getQuestions().get(1);
-			// curBackground = ;
 		} else if (state == 8) {
 			curState = curRegion.getStates().get(2);
 			curQuestion = curState.getQuestions().get(2);
-			// curBackground = ;
 		} else if (state == 9) {
 			end = true;
 		}
